@@ -2,6 +2,32 @@
 
 让她自己换 QQ 头像、改个性签名。
 
+## 安装
+
+在 AstrBot WebUI 的**插件市场**搜索「自我形象」，或者：
+
+```bash
+cd AstrBot/data/plugins
+git clone https://github.com/baiao218/astrbot_plugin_qq_self.git
+```
+
+重启 AstrBot（或在插件页点「重载插件」）。
+
+### 前置条件
+
+1. **AstrBot ≥ 4.17.0**
+2. **必须使用 NapCat**：`set_qq_avatar`、`set_self_longnick` 是 NapCat 的扩展接口，
+   Lagrange / LLOneBot 是否支持取决于版本
+3. 把想让她挑的图片放进 `data/plugin_data/astrbot_plugin_qq_self/avatars/`，
+   文件名会成为她嘴里的代号
+4. 注意：QQ 对头像和签名的修改有频率风控，默认限流值是保守值，别调太激进
+
+### 许可
+
+MIT，见 [LICENSE](LICENSE)。
+
+---
+
 ## 能做到什么，做不到什么
 
 | 需求 | 可行性 | 依据 |
