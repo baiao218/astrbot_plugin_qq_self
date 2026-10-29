@@ -1,0 +1,50 @@
+{
+  "enable": {
+    "description": "启用自我形象",
+    "type": "bool",
+    "hint": "开启后，她可以自己换头像、改签名。",
+    "default": true
+  },
+  "owner_only": {
+    "description": "只允许在主号会话里改",
+    "type": "bool",
+    "hint": "强烈建议保持开启。否则陌生人只要哄她两句，就能让她把签名改掉。关闭后指令仍限管理员，但工具对所有会话开放。",
+    "default": true
+  },
+  "owner_umo": {
+    "description": "主号会话（可选）",
+    "type": "string",
+    "hint": "留空则用 admins_id 判断，一般不用填。",
+    "default": ""
+  },
+  "avatar_dir": {
+    "description": "头像目录",
+    "type": "string",
+    "hint": "留空则用插件数据目录下的 avatars/。往里放 jpg / png，她就能按名字挑。",
+    "default": ""
+  },
+  "avatar_cooldown_minutes": {
+    "description": "换头像冷却（分钟）",
+    "type": "int",
+    "hint": "QQ 对头像修改有风控，改太勤会触发验证。默认 360（6 小时）。",
+    "default": 360
+  },
+  "signature_cooldown_minutes": {
+    "description": "改签名冷却（分钟）",
+    "type": "int",
+    "hint": "默认 60 分钟。",
+    "default": 60
+  },
+  "daily_max": {
+    "description": "每天最多改几次（头像+签名合计）",
+    "type": "int",
+    "hint": "默认 4 次。设 0 表示不限制——不建议。",
+    "default": 4
+  },
+  "signature_max_chars": {
+    "description": "签名最长字数",
+    "type": "int",
+    "hint": "QQ 签名本身也有上限，建议 40 以内。",
+    "default": 40
+  }
+}
